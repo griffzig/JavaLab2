@@ -56,7 +56,7 @@ public class DiceBag {
 			dice[i] = element.toString();
 		}
 		
-		rollFours = "Dice Rolled\n" + dice + "\nSum: " + getSum();
+		rollFours = "Dice Rolled\n" + dice.toString() + "\nSum: " + getSum();
 		
 		return rollFours;
 		

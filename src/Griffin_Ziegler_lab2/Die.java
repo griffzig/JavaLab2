@@ -63,7 +63,7 @@ public class Die {
 		return face;
 	}
 	
-	public String toString() {
+	@Override public String toString() {
 		// return string representation of die: # of sides and current face
 		return "# of Sides: " + sides + " | Current face: " + getFace();
 	}

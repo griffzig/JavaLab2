@@ -3,9 +3,15 @@ package Griffin_Ziegler_lab2;
 //holds an amount of each type of currency
 
 public class Purse {
-	private int hundreds, twenties, tens,
-				fives, ones, fiftyCentPcs,
-				dimes, nickels, pennies;
+	private int hundreds;
+	private int	twenties;
+	private int tens;
+	private int fives;
+	private int ones;
+	private int fiftyCentPcs;
+	private int dimes;
+	private int nickels;
+	private int pennies;
 	public double cashTotal;
 	
 	
@@ -104,7 +110,7 @@ public class Purse {
 		return Currency.PENNIES.getDollars() * pennies;
 	}
 	
-	public double cashTotal() {
+	public double getCashTotal() {
 		// compute the total amount of money
 		return cashTotal = getHundredsVal() + getTwentiesVal() + getTensVal() +
 					getFivesVal() + getOnesVal() + getFiftyCentPcsVal() +

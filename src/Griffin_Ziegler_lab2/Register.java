@@ -8,11 +8,18 @@ public class Register {
 	// Declare variables
 	double registerDefault = 528.2; // original amt of cash in the register
 	double registerTotal; // total amt of cash in the register
-	double moneyIn; // amt of cash going in, aka purchase made
 	// double change; // amt of change to return to customer
 	
-	private int hundreds, twenties, tens, fives, ones,
-		fiftyCentPcs, dimes, nickels, pennies;
+	private int hundreds;
+	private int twenties;
+	private int tens;
+	private int fives;
+	private int ones;
+	private int fiftyCentPcs;
+	private int dimes;
+	private int nickels;
+	private int pennies;
+	
 	/* Create new Purse object "r" to represent
 	 * the amount of starting money in the register 
 	 */
@@ -35,7 +42,7 @@ public class Register {
 		// returns register to original state
 		double cashOut;
 		
-		registerTotal = r.cashTotal();
+		registerTotal = r.getCashTotal();
 		
 		// reset register
 		r.setHundredsVal(0);
@@ -62,12 +69,18 @@ public class Register {
 		Purse change = new Purse();
 		
 		// declare ints to represent change to give back
-		int hundredsInChange = 0, twentiesInChange = 0, tensInChange = 0,
-			fivesInChange = 0, onesInChange = 0, fiftyCentsInChange = 0,
-			dimesInChange = 0, nickelsInChange = 0, penniesInChange = 0;
+		int hundredsInChange = 0;
+		int twentiesInChange = 0;
+		int tensInChange = 0;
+		int fivesInChange = 0;
+		int onesInChange = 0;
+		int fiftyCentsInChange = 0;
+		int dimesInChange = 0;
+		int nickelsInChange = 0;
+		int penniesInChange = 0;
 		
 		
-		if (cashIn.cashTotal() < price) {
+		if (cashIn.getCashTotal() < price) {
 			return cashIn;
 		} else {
 			// put the money from the purse into the register
@@ -114,7 +127,7 @@ public class Register {
 	
 	public double empty() {
 		// set currency to 0
-		registerTotal = r.cashTotal();
+		registerTotal = r.getCashTotal();
 		
 		return registerTotal; 
 	}
