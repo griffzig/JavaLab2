@@ -62,16 +62,62 @@ public class DiceBag {
 		
 	}
 	
-//	public String rollSixes(int numberOfDice) {
-//		
-//	}
-//	
-//	public String rollEights(int numberOfDice) {
-//		
-//	}
-//
-//	public String Armageddon() {
-//		
-//	}
+	public String rollSixes(int numberOfDice) {
+		// return strings representing each dice roll and sum of dice 
+				String rollSixes;
+				
+				// allocate memory for 6 rolls
+				rolls = new int[6];
+				String[] dice = new String[6];
+				
+				// roll the dice and store results in the array
+				for (int i = 0; i < 6; i++) {
+					// initialize variable to represent die object in ArrayList
+					Die element = allDice.get(i);
+					
+					// perform rolls and store them in array
+					rolls[i] = element.roll();
+					
+					// get string representation of dice and store in array
+					dice[i] = element.toString();
+				}
+				
+				rollSixes = "Dice Rolled\n" + dice.toString() + "\nSum: " + getSum();
+				
+				return rollSixes;	
+	}
+	
+
+	public String rollEights(int numberOfDice) {
+		// return strings representing each dice roll and sum of dice 
+				String rollEights;
+				
+				// allocate memory for 4 rolls
+				rolls = new int[8];
+				String[] dice = new String[8];
+				
+				// roll the dice and store results in the array
+				for (int i = 0; i < 8; i++) {
+					// initialize variable to represent die object in ArrayList
+					Die element = allDice.get(i);
+					
+					// perform rolls and store them in array
+					rolls[i] = element.roll();
+					
+					// get string representation of dice and store in array
+					dice[i] = element.toString();
+				}
+				
+				rollEights = "Dice Rolled\n" + dice.toString() + "\nSum: " + getSum();
+				
+				return rollEights;
+	}
+
+	public String Armageddon() {
+		// roll all dice in the bag
+		String allRolls;
+		
+		rolls = new int[totalDice];
+	}
 	
 }
